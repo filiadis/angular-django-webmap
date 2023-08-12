@@ -36,12 +36,10 @@ DEBUG = False if ENV == "PROD" else True
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", default="*").split(",")
 
 CORS_ALLOWED_ORIGINS = [
-    'http://angular',
     'http://localhost',
     'http://127.0.0.1',
     'http://0.0.0.0',
     'http://localhost:4200',
-    'http://89.116.30.55',
 ]
 
 CORS_ALLOW_CREDENTIALS = True
