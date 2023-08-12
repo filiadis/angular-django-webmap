@@ -1,0 +1,18 @@
+.header {
+  background-color: black;
+  left: 0%;
+  right: 0%;
+  height: 45px;
+  padding: 2px;
+  border: 2px solid black;
+  z-index: 200;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_title {
+  font-size: 20pt;
+  color: white;
+}

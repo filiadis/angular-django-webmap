@@ -1,0 +1,28 @@
+<div *ngIf="measureLineState" class="measure-line">
+  <div class="header-container">
+    <div class="measure-line-header">Μέτρηση μήκους</div>
+    <div>
+      <img
+        (click)="closeMeasureLine()"
+        class="img-close"
+        src="../../../../assets/icons/close.png"
+      />
+    </div>
+  </div>
+  <div class="dialog-body">
+    <label class="explanation"
+      >Κάντε "κλίκ" στον χάρτη για να μετρήσετε αποστάσεις</label
+    ><br /><br />
+    <label><b>Μέτρα:</b> {{ meters | number : "1.2-2" }}</label
+    ><br /><br />
+    <label><b>Χιλιόμετρα:</b> {{ km | number : "1.2-2" }}</label
+    ><br /><br />
+    <button
+      type="button"
+      class="btn btn-primary btn-sm d-inline mr-2"
+      (click)="clearMeasureLine()"
+    >
+      Νέα Μέτρηση
+    </button>
+  </div>
+</div>

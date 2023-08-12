@@ -1,0 +1,28 @@
+# Node modules and logs
+node_modules/
+npm-debug.log
+
+# Angular build output
+dist/
+
+# IDE-specific directories
+.idea/
+.vscode/
+*.code-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Git directory and files
+.git/
+.gitignore
+
+# Editor backup files
+*.bak
+*.swp
+*.swo
+
+# Other files and directories that you might not want in your Docker image
+README.md
+*.md

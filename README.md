@@ -1,1 +1,1 @@
-# angular-django-webmap
+# angular-django

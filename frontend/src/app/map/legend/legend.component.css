@@ -1,0 +1,60 @@
+.legend {
+  position: absolute;
+  top: 5%;
+  bottom: 0%;
+  left: 0%;
+  right: 78%;
+  padding: 10px;
+  background-color: white;
+  border-right: 2px solid black;
+  overflow: scroll;
+  z-index: 200;
+}
+
+.legend-title-1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: grey;
+}
+
+.legend-title-2 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.onOff {
+  height: 25px;
+  width: 25px;
+}
+
+.onOff:hover {
+  background-color: rgb(224, 224, 224);
+}
+
+.legend-toggle-on {
+  position: absolute;
+  left: 18%;
+  top: 5.5%;
+  background-color: white;
+  border-radius: 5px;
+  border-width: 1px;
+  z-index: 300;
+}
+
+.legend-toggle-off {
+  position: absolute;
+  left: 0%;
+  top: 5.5%;
+  background-color: white;
+  border-radius: 5px;
+  border-width: 1px;
+  z-index: 300;
+}
+
+.legend-toggle-on:hover {
+  background-color: lightgray;
+}
+
+.legend-toggle-off:hover {
+  background-color: lightgray;
+}

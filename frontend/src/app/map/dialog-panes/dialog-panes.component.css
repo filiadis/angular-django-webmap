@@ -1,0 +1,47 @@
+.measure-line {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  top: 10%;
+  right: 0.5%;
+  width: 20%;
+  height: 30%;
+  background-color: white;
+  z-index: 150;
+}
+
+.header-container {
+  display: flex;
+  height: 36px;
+}
+
+.measure-line-header {
+  background-color: rgb(37, 150, 190);
+  font-weight: bold;
+  color: white;
+  font-size: 1.1rem;
+  text-align: center;
+  border-bottom: 2px solid black;
+  width: 95%;
+  padding: 3px;
+}
+
+.img-close {
+  width: 34px;
+  background-color: gainsboro;
+  border-bottom: 2px solid black;
+}
+.img-close:hover {
+  background-color: lightgray;
+}
+
+.dialog-body {
+  flex: 1;
+  padding: 10px;
+}
+
+.explanation {
+  font-style: italic;
+  font-size: 0.8rem;
+}

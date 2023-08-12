@@ -1,0 +1,33 @@
+<app-header name="Login" />
+<div id="login_form">
+  <form (ngSubmit)="onSubmit()">
+    <div id="username" class="form-group">
+      <input
+        [(ngModel)]="username"
+        name="username"
+        type="text"
+        class="form-control"
+        aria-describedby="emailHelp"
+        placeholder="Username..."
+      />
+    </div>
+
+    <div id="password" class="form-group">
+      <input
+        [(ngModel)]="password"
+        name="password"
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Password..."
+      />
+    </div>
+
+    <div id="submit_btn">
+      <button type="submit" class="btn btn-success">Login</button>
+    </div>
+  </form>
+</div>
+<div class="error">
+  {{ loginError }}
+</div>

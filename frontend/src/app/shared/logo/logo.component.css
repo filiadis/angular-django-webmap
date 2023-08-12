@@ -1,0 +1,12 @@
+.logo {
+  height: 45px;
+  width: 90px;
+}
+
+.logoDiv {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  bottom: 95%;
+  z-index: 500;
+}

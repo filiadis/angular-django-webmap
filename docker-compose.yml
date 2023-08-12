@@ -1,0 +1,21 @@
+version: "3"
+services:
+  django:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - ./backend:/app
+
+  angular:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - ./frontend:/app
+    depends_on:
+      - django

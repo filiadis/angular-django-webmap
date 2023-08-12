@@ -1,0 +1,124 @@
+<label class="legend-title-1">Επίπεδα Πληροφορίας</label>
+<div>
+  <label class="legend-title-2">Διοικητικά</label
+  ><img
+    *ngIf="!admin"
+    class="onOff"
+    src="../../../../assets/icons/arrow_down.png"
+    alt="Toggle"
+    (click)="toggleAdmin()"
+  />
+
+  <img
+    *ngIf="admin"
+    class="onOff"
+    src="../../../../assets/icons/arrow_up.png"
+    alt="Toggle"
+    (click)="toggleAdmin()"
+  /><br />
+
+  <!-- ADD LAYERS-->
+  <div [hidden]="!admin">
+    <app-layer-item labelName="perifereies" wmsName="perifereies" />
+    <app-layer-item labelName="nomoi" wmsName="nomoi" />
+    <app-layer-item labelName="dimoi_kal" wmsName="dimoi_kal" />
+    <app-layer-item labelName="dimEn" wmsName="dimEn" />
+  </div>
+</div>
+<div>
+  <label class="legend-title-2">Υποδομές</label>
+  <img
+    *ngIf="!ipodomes"
+    class="onOff"
+    src="../../../../assets/icons/arrow_down.png"
+    alt="Toggle"
+    (click)="toggleIpodomes()"
+  />
+
+  <img
+    *ngIf="ipodomes"
+    class="onOff"
+    src="../../../../assets/icons/arrow_up.png"
+    alt="Toggle"
+    (click)="toggleIpodomes()"
+  /><br />
+  <!-- ADD LAYERS-->
+  <div [hidden]="!ipodomes">
+    <app-layer-item labelName="railway" wmsName="railway" />
+  </div>
+</div>
+<div>
+  <label class="legend-title-2">Περιβαλλοντικά</label>
+  <img
+    *ngIf="!perivallon"
+    class="onOff"
+    src="../../../../assets/icons/arrow_down.png"
+    alt="Toggle"
+    (click)="togglePerivallon()"
+  />
+
+  <img
+    *ngIf="perivallon"
+    class="onOff"
+    src="../../../../assets/icons/arrow_up.png"
+    alt="Toggle"
+    (click)="togglePerivallon()"
+  /><br />
+  <!-- ADD LAYERS-->
+  <div [hidden]="!perivallon">
+    <app-layer-item labelName="natura" wmsName="natura" />
+    <app-layer-item labelName="ethn_drymoi" wmsName="ethn_drymoi" />
+    <app-layer-item labelName="ethn_parka" wmsName="ethn_parka" />
+    <app-layer-item
+      labelName="diethneis_sinthikes"
+      wmsName="diethneis_sinthikes"
+    />
+    <app-layer-item labelName="aisth_dasi" wmsName="aisth_dasi" />
+    <app-layer-item labelName="kat_agrias_zois" wmsName="kat_agrias_zois" />
+    <app-layer-item labelName="elegx_kin_per" wmsName="elegx_kin_per" />
+    <app-layer-item labelName="corine_biotopes" wmsName="corine_biotopes" />
+    <app-layer-item labelName="tifk" wmsName="tifk" />
+    <app-layer-item labelName="rest_biotopes" wmsName="rest_biotopes" />
+    <app-layer-item labelName="loipa_topia" wmsName="loipa_topia" />
+    <app-layer-item labelName="zoni_parnithas" wmsName="zoni_parnithas" />
+    <app-layer-item
+      labelName="zones_prostasias_aigaleo"
+      wmsName="zones_prostasias_aigaleo"
+    />
+    <app-layer-item
+      labelName="zoni_prostasias_lauriou"
+      wmsName="zoni_prostasias_lauriou"
+    />
+  </div>
+</div>
+<div>
+  <label class="legend-title-2">Πολεοδομικά και Χρήσεις Γης</label>
+  <img
+    *ngIf="!poleodomika"
+    class="onOff"
+    src="../../../../assets/icons/arrow_down.png"
+    alt="Toggle"
+    (click)="togglePoleodomika()"
+  />
+
+  <img
+    *ngIf="poleodomika"
+    class="onOff"
+    src="../../../../assets/icons/arrow_up.png"
+    alt="Toggle"
+    (click)="togglePoleodomika()"
+  /><br />
+  <!-- ADD LAYERS-->
+  <div [hidden]="!poleodomika">
+    <app-layer-item labelName="gps_attikis" wmsName="gps_attikis" />
+    <app-layer-item
+      labelName="xriseis_aktes_attiki"
+      wmsName="xriseis_aktes_attiki"
+    />
+    <app-layer-item labelName="zea_attiki_odos" wmsName="zea_attiki_odos" />
+    <app-layer-item labelName="zea_elaiona" wmsName="zea_elaiona" />
+    <app-layer-item labelName="zoe_mesogeion" wmsName="zoe_mesogeion" />
+    <app-layer-item labelName="paragog_drast" wmsName="paragog_drast" />
+    <app-layer-item labelName="atipes_viom_sygk" wmsName="atipes_viom_sygk" />
+  </div>
+</div>

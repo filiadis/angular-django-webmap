@@ -1,0 +1,21 @@
+<div *ngIf="goToXYState" class="measure-line" id="xy">
+  <div class="header-container">
+    <div class="measure-line-header">Μετάβαση σε συντεταγμένες</div>
+    <div>
+      <img
+        (click)="closegoToXY()"
+        class="img-close"
+        src="../../../../assets/icons/close.png"
+      />
+    </div>
+  </div>
+  <div class="dialog-body">
+    <label for="fname"><b>X:</b>&nbsp;&nbsp;</label>
+    <input type="number" [(ngModel)]="Xcoord" /><br /><br />
+    <label for="lname"><b>Y:</b>&nbsp;&nbsp;</label>
+    <input type="number" [(ngModel)]="Ycoord" /><br /><br />
+    <button class="btn btn-primary btn-sm" (click)="goToXYInput()">
+      Μετάβαση
+    </button>
+  </div>
+</div>

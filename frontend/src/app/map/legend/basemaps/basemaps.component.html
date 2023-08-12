@@ -1,0 +1,28 @@
+<label class="legend-title-1">Υπόβαθρα</label>
+<img
+  *ngIf="!hideBasemaps"
+  class="onOff"
+  src="../../../../assets/icons/arrow_up.png"
+  alt="Toggle"
+  (click)="toggleBasemaps()"
+/>
+
+<img
+  *ngIf="hideBasemaps"
+  class="onOff"
+  src="../../../../assets/icons/arrow_down.png"
+  alt="Toggle"
+  (click)="toggleBasemaps()"
+/><br />
+<div class="basemaps" [hidden]="hideBasemaps">
+  <div *ngFor="let basemap of basemaps">
+    <input
+      type="radio"
+      name="selectedBasemap"
+      [(ngModel)]="selectedBasemap"
+      [value]="basemap"
+      (change)="onBasemapChange()"
+    />
+    {{ basemap }}
+  </div>
+</div>

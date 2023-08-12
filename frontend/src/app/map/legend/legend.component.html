@@ -1,0 +1,16 @@
+<button
+  [class.legend-toggle-on]="isLegendVisible"
+  [class.legend-toggle-off]="!isLegendVisible"
+  title="Άνοιγμα/Κλείσιμο υπομνήματος"
+  (click)="toggleLegend()"
+>
+  <img
+    src="../../../assets/icons/legend_toggle.png"
+    style="height: 25px; width: 25px"
+  />
+</button>
+
+<div class="legend" *ngIf="isLegendVisible">
+  <app-basemaps /><br />
+  <app-layers />
+</div>

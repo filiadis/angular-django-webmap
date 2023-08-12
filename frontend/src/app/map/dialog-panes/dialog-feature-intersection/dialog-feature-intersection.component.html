@@ -1,0 +1,43 @@
+<div *ngIf="featureIntersectionState" class="measure-line" id="f_int">
+  <div class="header-container">
+    <div class="measure-line-header">Επικάλυψη επιπέδων</div>
+    <div>
+      <img
+        (click)="closefeatureIntersection()"
+        class="img-close"
+        src="../../../../assets/icons/close.png"
+      />
+    </div>
+  </div>
+  <div class="dialog-body">
+    <label class="explanation"
+      >Σχεδιάστε πολύγωνο στον χάρτη για να δείτε τις επικαλύψεις του με τα άλλα
+      επίπεδα</label
+    >
+
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <div *ngIf="loading" class="spinner"></div>
+
+    <ol>
+      <ng-container *ngFor="let item of serverResponse | keyvalue">
+        <li *ngIf="item.value.length > 0">
+          <span style="font-weight: bold">{{ layerProps[item.key].name }}</span>
+          <ul>
+            <li *ngFor="let subItem of item.value">{{ subItem }}</li>
+          </ul>
+        </li>
+      </ng-container>
+    </ol>
+    <br />
+    <button
+      class="btn btn-primary btn-sm space-right"
+      (click)="intersectionRequest()"
+    >
+      Υποβολή
+    </button>
+
+    <button class="btn btn-secondary btn-sm" (click)="clearOutput()">
+      Νέα Επιλογή
+    </button>
+  </div>
+</div>

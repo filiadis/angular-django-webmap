@@ -1,0 +1,28 @@
+<div *ngIf="featureInfoState" class="measure-line" id="finfo">
+  <div class="header-container">
+    <div class="measure-line-header">Πληροφορίες επιπέδων</div>
+    <div>
+      <img
+        (click)="closeFeatureInfo()"
+        class="img-close"
+        src="../../../../assets/icons/close.png"
+      />
+    </div>
+  </div>
+  <div class="dialog-body">
+    <label class="explanation"
+      >Κάντε "κλίκ" στον χάρτη για να δείτε τις ιδιότητες των ενεργών
+      επιπέδων</label
+    ><br /><br />
+    <div *ngIf="loading" class="spinner"></div>
+
+    <ol>
+      <li *ngFor="let item of serverResponse | keyvalue">
+        <div>
+          <span style="font-weight: bold">{{ layerProps[item.key].name }}</span>
+        </div>
+        <div>{{ item.value }}</div>
+      </li>
+    </ol>
+  </div>
+</div>

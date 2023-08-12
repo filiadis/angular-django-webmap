@@ -1,0 +1,32 @@
+<div *ngIf="measureAreaState" class="measure-line" id="area">
+  <div class="header-container">
+    <div class="measure-line-header">Μέτρηση εμβαδού</div>
+    <div>
+      <img
+        (click)="closeMeasureArea()"
+        class="img-close"
+        src="../../../../assets/icons/close.png"
+      />
+    </div>
+  </div>
+  <div class="dialog-body">
+    <label class="explanation"
+      >Κάντε "κλίκ" στον χάρτη για να μετρήσετε εμβαδόν</label
+    ><br /><br />
+    <label><b>Τετρ. Μέτρα:</b> {{ sq_meters | number : "1.2-2" }}</label
+    ><br /><br />
+    <label><b>Στρέμματα:</b> {{ stremmata | number : "1.2-2" }}</label
+    ><br /><br />
+    <label><b>Εκτάρια (Ha):</b> {{ ha | number : "1.2-2" }}</label
+    ><br /><br />
+    <label><b> Τετρ. Χλμ:</b> {{ sq_km | number : "1.2-2" }}</label
+    ><br /><br />
+    <button
+      type="button"
+      class="btn btn-primary btn-sm d-inline mr-2"
+      (click)="clearMeasureArea()"
+    >
+      Νέα Μέτρηση
+    </button>
+  </div>
+</div>
